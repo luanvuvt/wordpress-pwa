@@ -41,7 +41,7 @@ RUN cd /var/tmp/wp-offline-shell/ \
 # Build and install wp-add-to-homescreen.
 COPY wp-add-to-homescreen/wp-add-to-homescreen /usr/src/wordpress/wp-content/plugins/wp-add-to-homescreen
 RUN cd /usr/src/wordpress/wp-content/plugins/wp-add-to-homescreen/ \
-    && composer install \
+    && composer install --optimize-autoloader \
     && bower --allow-root install \
     && chown -R www-data:www-data /usr/src/wordpress/wp-content/plugins/wp-add-to-homescreen
 
