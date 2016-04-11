@@ -14,14 +14,7 @@
                         "MYSQL_USER": "$DBUSER",
                         "MYSQL_PASSWORD": "$DBPASS",
                         "MYSQL_DATABASE": "wordpress"
-                    },
-                    "volumes": [
-                        {
-                            "container_path": "/var/lib/mysql",
-                            "mode": "RW",
-                            "size": "500MB"
-                        }
-                    ]
+                    }
                 }
             ]
         },
@@ -43,7 +36,7 @@
                         }
                     ],
                     "env": {
-                        "WORDPRESS_DB_HOST": "mariadb.backend.wordpress-pwa.$USERNAME",
+                        "WORDPRESS_DB_HOST": "mariadb.backend.wordpress-pwa",
                         "WORDPRESS_DB_USER": "$DBUSER",
                         "WORDPRESS_DB_PASSWORD": "$DBPASS"
                     },
